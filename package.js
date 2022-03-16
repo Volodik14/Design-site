@@ -1,15 +1,34 @@
+var
+  where = 'client' // Adds files only to the client
+;
 
 Package.describe({
-  name    : 'semantic:ui-dropdown',
-  summary : 'Semantic UI - Dropdown: Single component release',
-  version : '2.2.10',
-  git     : 'git://github.com/Semantic-Org/UI-Dropdown.git',
+  name    : 'semantic:ui-css',
+  summary : 'Semantic UI - CSS Release of Semantic UI',
+  version : '2.4.1',
+  git     : 'git://github.com/Semantic-Org/Semantic-UI-CSS.git',
 });
 
 Package.onUse(function(api) {
+
   api.versionsFrom('1.0');
+
+  api.use('jquery', 'client');
+
   api.addFiles([
-    'dropdown.css',
-    'dropdown.js'
+    // icons
+    'themes/default/assets/fonts/icons.eot',
+    'themes/default/assets/fonts/icons.svg',
+    'themes/default/assets/fonts/icons.ttf',
+    'themes/default/assets/fonts/icons.woff',
+    'themes/default/assets/fonts/icons.woff2',
+
+    // flags
+    'themes/default/assets/images/flags.png',
+
+    // release
+    'semantic.css',
+    'semantic.js'
   ], 'client');
+
 });
