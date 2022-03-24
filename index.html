@@ -2,115 +2,169 @@
 <html lang="en-US">
 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="semantic.min.css">
   <link rel="stylesheet" type="text/css" href="mystyle.css">
   <link rel="stylesheet" type="text/css" href="mobilestyle.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="semantic.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 </head>
 
 <body>
-  <div class="main">
-    <h1 align="center">Выбор интересов и хобби.</h1>
-    <h2 align="left">Выберите хобби из данного списка:</h2>
-    <div class="ui fluid multiple search selection dropdown" id="hobby-select">
-      <input type="hidden" name="country">
-      <i class="dropdown icon"></i>
-      <div class="default text">Выберите хобби</div>
-      <div class="menu">
-        <div class="item">AC/DC</div>
-        <div class="item">Adult Swim</div>
-        <div class="item">DC Comics</div>
-        <div class="item">Eminem</div>
-        <div class="item">Facebook</div>
-        <div class="item">Guns N' Roses</div>
-        <div class="item">League of Legends</div>
-        <div class="item">Linkin Park</div>
-        <div class="item">Louis Vuitton</div>
-        <div class="item">Metallica</div>
-        <div class="item">NBA 2K</div>
-        <div class="item">PS3</div>
-        <div class="item">Red Hot Chili Peppers</div>
-        <div class="item">Xbox 360</div>
-        <div class="item">YouTube</div>
-        <div class="item">Аватар</div>
-        <div class="item">Автомобильные путешествия</div>
-        <div class="item">Администрация</div>
-        <div class="item">Бег</div>
-        <div class="item">Библия</div>
-        <div class="item">Боб Марли</div>
-        <div class="item">Волосы</div>
-        <div class="item">Девушки</div>
-        <div class="item">Дружба</div>
-        <div class="item">Друзья</div>
-        <div class="item">Друзья и близкие</div>
-        <div class="item">Дуэйн Уэйд</div>
-        <div class="item">Дэвид Бекхэм</div>
-        <div class="item">Индивидуальный предприниматель</div>
-        <div class="item">Интернет</div>
-        <div class="item">Как я встретил вашу маму</div>
-        <div class="item">Клиентская поддержка и продажи</div>
-        <div class="item">Комедия</div>
-        <div class="item">Косметика</div>
-        <div class="item">Криштиану Рональду</div>
-        <div class="item">Лак для ногтей</div>
-        <div class="item">Леброн Джеймс</div>
-        <div class="item">Любовь</div>
-        <div class="item">Мальчишник в Вегасе</div>
-        <div class="item">Мама</div>
-        <div class="item">Медицина</div>
-        <div class="item">Мода</div>
-        <div class="item">Мода и красота</div>
-        <div class="item">Море</div>
-        <div class="item">Музыка</div>
-        <div class="item">Нью Йорк</div>
-        <div class="item">Образование</div>
-        <div class="item">Океан</div>
-        <div class="item">Перевозчик</div>
-        <div class="item">Плавание</div>
-        <div class="item">Платья</div>
-        <div class="item">Плохие Парни</div>
-        <div class="item">Пляжный отдых</div>
-        <div class="item">Покемон</div>
-        <div class="item">Поп рок</div>
-        <div class="item">Поэзия</div>
-        <div class="item">Прогулки по пляжу</div>
-        <div class="item">Психология</div>
-        <div class="item">Путешествия</div>
-        <div class="item">Путешествия за рубеж</div>
-        <div class="item">Путешествия на выходных</div>
-        <div class="item">Р'н'Б</div>
-        <div class="item">Релаксация</div>
-        <div class="item">Романс Х</div>
-        <div class="item">Романтические новеллы</div>
-        <div class="item">Роналдиньо Гаушо</div>
-        <div class="item">Симпсоны</div>
-        <div class="item">Слушать музыку</div>
-        <div class="item">Смеяться</div>
-        <div class="item">Солитёр</div>
-        <div class="item">Солнце</div>
-        <div class="item">Социализация</div>
-        <div class="item">Спорт</div>
-        <div class="item">Студент</div>
-        <div class="item">Супер Марио</div>
-        <div class="item">Танцевать</div>
-        <div class="item">Татуировки</div>
-        <div class="item">Творчество</div>
-        <div class="item">Теория большого взрыва</div>
-        <div class="item">Трансформеры</div>
-        <div class="item">Туфли</div>
-        <div class="item">Ужасы</div>
-        <div class="item">Фотографирование</div>
-        <div class="item">Футбол</div>
-        <div class="item">Ходьба</div>
-        <div class="item">Честность</div>
-        <div class="item">Чтение книг</div>
-        <div class="item">Шопинг</div>
-        <div class="item">Юмор</div>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        FindME
       </div>
     </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+        <ul>
+      <li><a href="#" target="_blank">Главная</a></li>
+      <li><a href="#" target="_blank">Помощь</a></li>
+      <li><a href="#" target="_blank">О нас</a></li>
+      <a class="icon">
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-youtube"></i>
+
+      </a>
+        </ul>
+    </div>
   </div>
+
+  <div class="main">
+    <!--<h1 align="center">Анкета.</h1>-->
+    <form class="ui form">
+      <div class="field">
+        <label>Имя</label>
+        <input type="text" name="name" placeholder="Имя">
+      </div>
+      <div class="field">
+        <label>Дата рождения</label>
+        <input type="date" name="date" placeholder="Дата рождения">
+      </div>
+      <div class="field">
+        <label>Город</label>
+        <input type="text" name="city" placeholder="Город">
+      </div>
+      <div class="field">
+        <label>О себе</label>
+        <textarea></textarea>
+      </div>
+      <div class="field">
+        <label>Хобби</label>
+          <select class="ui fluid search dropdown" multiple="" id="hobby-select">
+            <option value="AC/DC">AC/DC</option>)
+            <option value="Adult Swim">Adult Swim</option>)
+            <option value="DC Comics">DC Comics</option>)
+            <option value="Eminem">Eminem</option>)
+            <option value="Facebook">Facebook</option>)
+            <option value="Guns N' Roses">Guns N' Roses</option>)
+            <option value="League of Legends">League of Legends</option>)
+            <option value="Linkin Park">Linkin Park</option>)
+            <option value="Louis Vuitton">Louis Vuitton</option>)
+            <option value="Metallica">Metallica</option>)
+            <option value="NBA 2K">NBA 2K</option>)
+            <option value="PS3">PS3</option>)
+            <option value="Red Hot Chili Peppers">Red Hot Chili Peppers</option>)
+            <option value="Xbox 360">Xbox 360</option>)
+            <option value="YouTube">YouTube</option>)
+            <option value="Аватар">Аватар</option>)
+            <option value="Автомобильные путешествия">Автомобильные путешествия</option>)
+            <option value="Администрация">Администрация</option>)
+            <option value="Бег">Бег</option>)
+            <option value="Библия">Библия</option>)
+            <option value="Боб Марли">Боб Марли</option>)
+            <option value="Волосы">Волосы</option>)
+            <option value="Девушки">Девушки</option>)
+            <option value="Дружба">Дружба</option>)
+            <option value="Друзья">Друзья</option>)
+            <option value="Друзья и близкие">Друзья и близкие</option>)
+            <option value="Дуэйн Уэйд">Дуэйн Уэйд</option>)
+            <option value="Дэвид Бекхэм">Дэвид Бекхэм</option>)
+            <option value="Индивидуальный предприниматель">Индивидуальный предприниматель</option>)
+            <option value="Интернет">Интернет</option>)
+            <option value="Как я встретил вашу маму">Как я встретил вашу маму</option>)
+            <option value="Клиентская поддержка и продажи">Клиентская поддержка и продажи</option>)
+            <option value="Комедия">Комедия</option>)
+            <option value="Косметика">Косметика</option>)
+            <option value="Криштиану Рональду">Криштиану Рональду</option>)
+            <option value="Лак для ногтей">Лак для ногтей</option>)
+            <option value="Леброн Джеймс">Леброн Джеймс</option>)
+            <option value="Любовь">Любовь</option>)
+            <option value="Мальчишник в Вегасе">Мальчишник в Вегасе</option>)
+            <option value="Мама">Мама</option>)
+            <option value="Медицина">Медицина</option>)
+            <option value="Мода">Мода</option>)
+            <option value="Мода и красота">Мода и красота</option>)
+            <option value="Море">Море</option>)
+            <option value="Музыка">Музыка</option>)
+            <option value="Нью Йорк">Нью Йорк</option>)
+            <option value="Образование">Образование</option>)
+            <option value="Океан">Океан</option>)
+            <option value="Перевозчик">Перевозчик</option>)
+            <option value="Плавание">Плавание</option>)
+            <option value="Платья">Платья</option>)
+            <option value="Плохие Парни">Плохие Парни</option>)
+            <option value="Пляжный отдых">Пляжный отдых</option>)
+            <option value="Покемон">Покемон</option>)
+            <option value="Поп рок">Поп рок</option>)
+            <option value="Поэзия">Поэзия</option>)
+            <option value="Прогулки по пляжу">Прогулки по пляжу</option>)
+            <option value="Психология">Психология</option>)
+            <option value="Путешествия">Путешествия</option>)
+            <option value="Путешествия за рубеж">Путешествия за рубеж</option>)
+            <option value="Путешествия на выходных">Путешествия на выходных</option>)
+            <option value="Р'н'Б">Р'н'Б</option>)
+            <option value="Релаксация">Релаксация</option>)
+            <option value="Романс Х">Романс Х</option>)
+            <option value="Романтические новеллы">Романтические новеллы</option>)
+            <option value="Роналдиньо Гаушо">Роналдиньо Гаушо</option>)
+            <option value="Симпсоны">Симпсоны</option>)
+            <option value="Слушать музыку">Слушать музыку</option>)
+            <option value="Смеяться">Смеяться</option>)
+            <option value="Солитёр">Солитёр</option>)
+            <option value="Солнце">Солнце</option>)
+            <option value="Социализация">Социализация</option>)
+            <option value="Спорт">Спорт</option>)
+            <option value="Студент">Студент</option>)
+            <option value="Супер Марио">Супер Марио</option>)
+            <option value="Танцевать">Танцевать</option>)
+            <option value="Татуировки">Татуировки</option>)
+            <option value="Творчество">Творчество</option>)
+            <option value="Теория большого взрыва">Теория большого взрыва</option>)
+            <option value="Трансформеры">Трансформеры</option>)
+            <option value="Туфли">Туфли</option>)
+            <option value="Ужасы">Ужасы</option>)
+            <option value="Фотографирование">Фотографирование</option>)
+            <option value="Футбол">Футбол</option>)
+            <option value="Ходьба">Ходьба</option>)
+            <option value="Честность">Честность</option>)
+            <option value="Чтение книг">Чтение книг</option>)
+            <option value="Шопинг">Шопинг</option>)
+            <option value="Юмор">Юмор</option>)
+          </select>
+      </div>
+
+
+      <br>
+      <button class="ui button" type="submit">Сохранить</button>
+    </form>
+  </div>
+
+
+
 
   <script>
     $('#hobby-select').dropdown();
