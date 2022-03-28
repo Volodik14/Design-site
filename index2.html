@@ -145,11 +145,13 @@
     <button class="ui button" id="btnSubmit">Сохранить</button>
   </div>
 
+
+
+
   <script>
     $('#hobby-select').dropdown();
     var selected = new Set();
     var categories = new Set();
-    const labelText = hobbyLabel.text();
     $('#hobby-select').on('change', (ev) => {
       const select = ev.currentTarget;
       const options = select.options;
@@ -159,6 +161,9 @@
           selected.add(option.value);
           categories.add(category);
         }
+          //categories.add(option.data("value"));
+          //if (!categories.has(category))
+          //  categories.add(category);
     })
     $(document).ready(function() {
     $("#btnSubmit").click(function(){
