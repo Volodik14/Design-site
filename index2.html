@@ -189,11 +189,7 @@
     })
     $(document).ready(function () {
       $("#btnSubmit").click(function () {
-        const data = "Выбрано хобби " + selected.size + "\rВыбрано категорий " + categories.size
-        const textToBLOB = new Blob([data], { type: "text/plain;charset=utf-8" });
         swal("Задание успешно выполнено!", "Сообщите об этом модератору. \n Спасибо, что приняли участие) \n " + selected.size + "/" + categories.size, "success");
-        saveAs(textToBLOB, "result.data");
-        $('#hobby-select').dropdown('clear');  
       });
     });
   </script>
