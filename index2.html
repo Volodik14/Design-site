@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="mystyle.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script src="semantic.min.js"></script>
+  <script src="semantic.js"></script>
   <script src="FileSaver.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -169,7 +169,9 @@
 
 
   <script>
-    $('#hobby-select').dropdown();
+    $('#hobby-select').dropdown({
+    //"action": "combo"
+});
     var selected = new Set();
     var categories = new Set();
     $('#hobby-select').on('change', (ev) => {
@@ -187,10 +189,11 @@
     })
     $(document).ready(function () {
       $("#btnSubmit").click(function () {
-        swal("Задание успешно выполнено!", "Спасибо, что приняли участие)", "success");
         const data = "Выбрано хобби " + selected.size + "\rВыбрано категорий " + categories.size
         const textToBLOB = new Blob([data], { type: "text/plain;charset=utf-8" });
+        swal("Задание успешно выполнено!", "Сообщите об этом модератору. \n Спасибо, что приняли участие) \n " + selected.size + "/" + categories.size, "success");
         saveAs(textToBLOB, "result.data");
+        $('#hobby-select').dropdown('clear');  
       });
     });
   </script>

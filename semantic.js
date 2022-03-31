@@ -6002,8 +6002,10 @@ $.fn.dropdown = function(parameters) {
             if( module.can.activate( $(element) ) ) {
               module.set.selected(value, $(element));
               if(module.is.multiple() && !module.is.allFiltered()) {
+                module.remove.searchTerm();
+                module.search()
                 return;
-              }
+              }                                                   
               else {
                 module.hideAndClear();
               }
